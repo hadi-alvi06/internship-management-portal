@@ -1,0 +1,52 @@
+export function adaptIntern(intern) {
+  return {
+    id: intern.Employee_ID,
+    employeeId: intern.Employee_ID,
+    name: intern.Full_Name,
+    gender: intern.Gender,
+    dob: intern.Date_of_Birth,
+    university: intern.University,
+    degree: intern.Degree,
+    semester: intern.Semester,
+    cgpa: intern.CGPA,
+    department: intern.Department,
+    supervisor: intern.Supervisor,
+    floor: intern.Floor,
+    start: intern.StartDate,
+    end: intern.EndDate,
+    email: intern.Email,
+    phone: intern.Phone,
+    address: intern.Address,
+    active: intern.Status === "Active",
+    status: intern.Status,
+    attendance: intern.Attendance_Percentage || 0,
+    progress: intern.Progress || 0,
+    daysRemaining: intern.Days_Remaining || 0,
+    tasks: intern.Tasks || [],
+    createdAt: intern.created_at,
+    lastModified: intern.Last_Modified || "",
+  };
+}
+
+export function internToFormData(intern) {
+  return {
+    fullName: intern.name || "",
+    employeeId: intern.employeeId || "",
+    gender: intern.gender || "",
+    dob: intern.dob || "",
+    university: intern.university || "",
+    degree: intern.degree || "",
+    semester: String(intern.semester || ""),
+    cgpa: intern.cgpa || "",
+    department: intern.department || "",
+    supervisor: intern.supervisor || "",
+    floor: intern.floor || "",
+    startDate: intern.start || "",
+    endDate: intern.end || "",
+    email: intern.email || "",
+    phone: intern.phone || "",
+    address: intern.address || "",
+    tasks: intern.tasks || [],
+    expectedLastModified: intern.lastModified || "",
+  };
+}

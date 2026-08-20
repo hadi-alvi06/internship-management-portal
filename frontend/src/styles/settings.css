@@ -1,0 +1,561 @@
+/* ==========================================
+   SETTINGS PAGE
+========================================== */
+
+.settings-page{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:30px;
+
+}
+
+.settings-header{
+
+    margin-bottom:30px;
+
+}
+
+.settings-header h1{
+
+    margin:0;
+
+    font-size:34px;
+
+    color:#1E293B;
+
+    font-weight:700;
+
+}
+
+.settings-header p{
+
+    margin-top:8px;
+
+    color:#64748B;
+
+    font-size:15px;
+
+}
+
+/* ==========================================
+   SETTINGS CARD
+========================================== */
+
+.settings-card{
+
+    background:#FFFFFF;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:18px;
+
+    padding:24px;
+
+    margin-bottom:24px;
+
+    box-shadow:0 8px 22px rgba(15,23,42,.05);
+
+    transition:.25s;
+
+}
+
+.settings-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 30px rgba(15,23,42,.08);
+
+}
+
+/* ==========================================
+   CARD TITLE
+========================================== */
+
+.settings-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:22px;
+
+}
+
+.settings-title svg{
+
+    color:#2563EB;
+
+    font-size:22px;
+
+}
+
+.settings-title h2{
+
+    margin:0;
+
+    font-size:22px;
+
+    color:#1E293B;
+
+}
+
+/* ==========================================
+   ROWS
+========================================== */
+
+.setting-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:16px 0;
+
+    border-bottom:1px solid #EDF2F7;
+
+}
+
+.setting-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.setting-row div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#334155;
+
+    font-weight:500;
+
+}
+
+.setting-icon{
+
+    color:#2563EB;
+
+    font-size:15px;
+
+}
+
+.setting-row span{
+
+    color:#475569;
+
+}
+
+/* ==========================================
+   SELECT
+========================================== */
+
+.setting-row select{
+
+    border:1px solid #CBD5E1;
+
+    border-radius:10px;
+
+    padding:10px 14px;
+
+    background:#FFFFFF;
+
+    font-size:14px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.setting-row select:focus{
+
+    outline:none;
+
+    border-color:#2563EB;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+/* ==========================================
+   STATUS BADGES
+========================================== */
+
+.status-connected{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:7px 14px;
+
+    border-radius:999px;
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.status-offline{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:7px 14px;
+
+    border-radius:999px;
+
+    background:#FEE2E2;
+
+    color:#DC2626;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   TOGGLE ROWS
+========================================== */
+
+.toggle-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:16px 0;
+
+    border-bottom:1px solid #EDF2F7;
+
+}
+
+.toggle-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.toggle-row label{
+
+    color:#334155;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+   CHECKBOX
+========================================== */
+
+.toggle-row input[type="checkbox"]{
+
+    width:20px;
+
+    height:20px;
+
+    cursor:pointer;
+
+    accent-color:#2563EB;
+
+}
+
+/* ==========================================
+   ABOUT
+========================================== */
+
+.settings-card p{
+
+    margin:10px 0;
+
+    color:#475569;
+
+    font-size:15px;
+
+}
+
+/* ==========================================
+   SAVE BUTTON
+========================================== */
+
+.save-settings{
+
+    margin-top:10px;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:16px;
+
+    background:#2563EB;
+
+    color:#FFFFFF;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+
+}
+
+.save-settings:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 14px 30px rgba(37,99,235,.35);
+
+}
+
+.save-settings:active{
+
+    transform:scale(.98);
+
+}
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media(max-width:900px){
+
+    .settings-page{
+
+        padding:24px;
+
+    }
+
+    .settings-header h1{
+
+        font-size:30px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .settings-page{
+
+        padding:20px;
+
+    }
+
+    .settings-card{
+
+        padding:20px;
+
+    }
+
+    .setting-row,
+
+    .toggle-row{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:12px;
+
+    }
+
+    .setting-row select{
+
+        width:100%;
+
+    }
+
+    .save-settings{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .settings-page{
+
+        padding:15px;
+
+    }
+
+    .settings-header h1{
+
+        font-size:26px;
+
+    }
+
+    .settings-header p{
+
+        font-size:14px;
+
+    }
+
+    .settings-title h2{
+
+        font-size:20px;
+
+    }
+
+}
+
+/* ==========================================
+   PAGE ANIMATIONS
+========================================== */
+
+.settings-card{
+
+    animation:fadeUp .4s ease;
+
+}
+
+.settings-card:nth-child(2){
+
+    animation-delay:.05s;
+
+}
+
+.settings-card:nth-child(3){
+
+    animation-delay:.1s;
+
+}
+
+.settings-card:nth-child(4){
+
+    animation-delay:.15s;
+
+}
+
+.settings-card:nth-child(5){
+
+    animation-delay:.2s;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.settings-header{
+
+    animation:fadeDown .45s ease;
+
+}
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   SMALL POLISH
+========================================== */
+
+.settings-card,
+
+.save-settings{
+
+    user-select:none;
+
+}
+
+.save-settings svg{
+
+    font-size:15px;
+
+}
+
+.setting-row,
+
+.toggle-row{
+
+    transition:.2s;
+
+}
+
+.setting-row:hover,
+
+.toggle-row:hover{
+
+    background:#F8FAFC;
+
+    border-radius:10px;
+
+    padding-left:10px;
+
+    padding-right:10px;
+
+}

@@ -1,0 +1,254 @@
+.intern-card {
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    border-left:6px solid #2563EB;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.07);
+
+    transition:.3s;
+
+}
+.intern-card {
+  transition: transform .12s ease, box-shadow .2s ease;
+}
+.intern-card:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+body.dark .intern-card:hover {
+  box-shadow: 0 20px 45px rgba(139, 92, 246, .3);
+}
+
+.warning-card{
+
+    border-left:6px solid #EF4444;
+
+}
+
+.card-top{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.avatar{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    background:#2563EB;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    flex-shrink:0;
+
+}
+
+.intern-name-section{
+
+    flex:1;
+
+}
+
+.intern-name-section h2{
+
+    margin:0;
+
+    font-size:20px;
+
+}
+
+.employee-id{
+
+    color:#64748B;
+
+    font-size:13px;
+
+}
+
+.status{
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+.active{
+
+    background:#DCFCE7;
+
+    color:#166534;
+
+}
+
+.inactive{
+
+    background:#E2E8F0;
+
+    color:#334155;
+
+}
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+.label{
+
+    font-size:13px;
+
+    color:#64748B;
+
+}
+
+.info-grid p{
+
+    margin-top:5px;
+
+    font-weight:600;
+
+}
+
+.attendance-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:25px;
+
+}
+
+.attendance{
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+}
+
+.excellent{
+
+    background:#DCFCE7;
+
+    color:#166534;
+
+}
+
+.good{
+
+    background:#FEF3C7;
+
+    color:#92400E;
+
+}
+
+.poor{
+
+    background:#FEE2E2;
+
+    color:#991B1B;
+
+}
+
+.card-buttons{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:28px;
+
+}
+
+.view-btn{
+
+    flex:1;
+
+    background:#2563EB;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:12px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.view-btn:hover{
+
+    background:#1D4ED8;
+
+}
+
+.edit-btn{
+
+    flex:1;
+
+    background:white;
+
+    border:2px solid #2563EB;
+
+    color:#2563EB;
+
+    border-radius:10px;
+
+    padding:12px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.edit-btn:hover{
+
+    background:#2563EB;
+
+    color:white;
+
+}

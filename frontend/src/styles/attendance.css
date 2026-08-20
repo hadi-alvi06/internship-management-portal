@@ -1,0 +1,778 @@
+/* =====================================
+   TOOLBAR
+===================================== */
+
+.attendance-page{
+
+    padding:30px;
+
+}
+
+.attendance-page h1{
+
+    margin-bottom:25px;
+
+    color:#1E293B;
+
+}
+
+.attendance-toolbar{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.toolbar-search{
+
+    flex:1;
+
+    min-width:260px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:white;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:12px;
+
+    padding:12px 16px;
+
+}
+
+.toolbar-search input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+.toolbar-icon{
+
+    color:#64748B;
+
+}
+
+.toolbar-select{
+
+    border:1px solid #E2E8F0;
+
+    border-radius:12px;
+
+    padding:12px 16px;
+
+    background:white;
+
+    font-size:15px;
+
+}
+
+.toolbar-date{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    border:1px solid #E2E8F0;
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:12px 16px;
+
+}
+
+.toolbar-date input{
+
+    border:none;
+
+    outline:none;
+
+}
+
+.present-btn{
+
+    background:#22C55E;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+.present-btn:hover{
+
+    background:#16A34A;
+
+}
+
+.save-btn{
+
+    background:#2563EB;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+.save-btn:hover{
+
+    background:#1D4ED8;
+
+}
+/* =====================================
+   TABLE
+===================================== */
+
+.attendance-table-container{
+
+    background:#FFFFFF;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}
+
+.attendance-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.attendance-table th{
+
+    background:#2563EB;
+
+    color:white;
+
+    text-align:left;
+
+    padding:16px;
+
+}
+
+.attendance-table td{
+
+    padding:16px;
+
+    border-bottom:1px solid #E2E8F0;
+
+}
+
+.attendance-table tbody tr:hover{
+
+    background:#F8FAFC;
+
+}
+
+.status-select{
+
+    padding:8px 12px;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-weight:600;
+
+}
+
+.status-present{
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+}
+
+.status-late{
+
+    background:#FEF3C7;
+
+    color:#B45309;
+
+}
+
+.status-absent{
+
+    background:#FEE2E2;
+
+    color:#B91C1C;
+
+}
+
+.attendance-percent{
+
+    font-weight:700;
+
+    color:#2563EB;
+
+}
+
+.no-data{
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#64748B;
+
+}
+/* =====================================
+   BULK TOOLBAR
+===================================== */
+
+.bulk-toolbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin-bottom:25px;
+
+    padding:18px 20px;
+
+    background:#FFFFFF;
+
+    border-radius:14px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.05);
+
+}
+
+.selected-count{
+
+    font-size:15px;
+
+    color:#475569;
+
+}
+
+.selected-count strong{
+
+    color:#2563EB;
+
+    font-size:20px;
+
+    margin-right:6px;
+
+}
+
+.bulk-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+.bulk-buttons button{
+
+    border:none;
+
+    padding:11px 18px;
+
+    border-radius:10px;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.bulk-present{
+
+    background:#16A34A;
+
+}
+
+.bulk-present:hover{
+
+    background:#15803D;
+
+}
+
+.bulk-late{
+
+    background:#D97706;
+
+}
+
+.bulk-late:hover{
+
+    background:#B45309;
+
+}
+
+.bulk-absent{
+
+    background:#DC2626;
+
+}
+
+.bulk-absent:hover{
+
+    background:#B91C1C;
+
+}
+/* ==========================================
+   ATTENDANCE TABLE
+========================================== */
+
+.attendance-table-container{
+
+    background:#FFFFFF;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid #E2E8F0;
+
+    box-shadow:0 8px 24px rgba(15,23,42,.06);
+
+}
+
+.attendance-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.attendance-table thead{
+
+    background:#2563EB;
+
+}
+
+.attendance-table th{
+
+    color:white;
+
+    text-align:left;
+
+    padding:18px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.attendance-table td{
+
+    padding:18px;
+
+    border-bottom:1px solid #EDF2F7;
+
+    vertical-align:middle;
+
+}
+
+.attendance-table tbody tr{
+
+    transition:.2s;
+
+}
+
+.attendance-table tbody tr:hover{
+
+    background:#F8FAFC;
+
+}
+
+/* ==========================================
+   INTERN CELL
+========================================== */
+
+.intern-cell{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.intern-avatar{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:#2563EB;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:700;
+
+    font-size:16px;
+
+}
+
+.intern-name{
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+}
+
+.intern-id{
+
+    color:#64748B;
+
+    font-size:13px;
+
+    margin-top:3px;
+
+}
+
+/* ==========================================
+   DEPARTMENT BADGE
+========================================== */
+
+.department-pill{
+
+    display:inline-block;
+
+    background:#DBEAFE;
+
+    color:#1D4ED8;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.status-select{
+
+    border:none;
+
+    outline:none;
+
+    border-radius:10px;
+
+    padding:8px 14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+.status-present{
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+}
+
+.status-late{
+
+    background:#FEF3C7;
+
+    color:#B45309;
+
+}
+
+.status-absent{
+
+    background:#FEE2E2;
+
+    color:#B91C1C;
+
+}
+
+/* ==========================================
+   ATTENDANCE BAR
+========================================== */
+
+.attendance-progress{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.attendance-bar{
+
+    width:120px;
+
+    height:10px;
+
+    background:#E2E8F0;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+.attendance-fill{
+
+    height:100%;
+
+    background:#2563EB;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+}
+
+.attendance-progress span{
+
+    font-weight:700;
+
+    color:#1E293B;
+
+}
+
+/* ==========================================
+   CHECKBOX
+========================================== */
+
+.attendance-table input[type="checkbox"]{
+
+    width:18px;
+
+    height:18px;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================
+   PAGINATION
+========================================== */
+
+.pagination{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:28px;
+
+    flex-wrap:wrap;
+
+}
+
+.pagination button{
+
+    border:none;
+
+    background:#FFFFFF;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    border:1px solid #E2E8F0;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.pagination button:hover{
+
+    background:#2563EB;
+
+    color:white;
+
+}
+
+.active-page{
+
+    background:#2563EB !important;
+
+    color:white;
+
+}
+
+/* ==========================================
+   NO DATA
+========================================== */
+
+.no-data{
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#64748B;
+
+    font-size:15px;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:950px){
+
+    .attendance-table{
+
+        min-width:850px;
+
+    }
+
+    .attendance-table-container{
+
+        overflow-x:auto;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .attendance-toolbar{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .bulk-toolbar{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .bulk-buttons{
+
+        width:100%;
+
+    }
+
+    .bulk-buttons button{
+
+        flex:1;
+
+        justify-content:center;
+
+    }
+
+}
+.status-icon-pop {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 50%;
+  font-size: 12px; font-weight: 700; margin-left: 8px;
+  animation: iconPop .3s cubic-bezier(.34,1.56,.64,1);
+}
+.status-icon-present { background: var(--success-soft); color: var(--success); }
+.status-icon-absent { background: var(--danger-soft); color: var(--danger); }
+.status-icon-late { background: var(--amber-soft); color: var(--amber); }
+@keyframes iconPop { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }

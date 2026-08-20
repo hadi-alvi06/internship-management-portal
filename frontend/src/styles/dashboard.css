@@ -1,0 +1,1831 @@
+/* =====================================================
+   INTERNSHIP MANAGEMENT SYSTEM
+   DASHBOARD CSS
+   PART 1
+=====================================================*/
+
+/* ---------- Dashboard Page ---------- */
+.dashboard-page h1,
+.page-header h1,
+.manage-page h1,
+.attendance-page h1,
+.settings-header h1 {
+  font-family: var(--font-display);
+  color: var(--ink);
+}
+
+.dashboard-page{
+
+    padding:30px;
+
+    background:#F4F7FC;
+
+    min-height:100vh;
+
+}
+
+/* ---------- Page Title ---------- */
+
+.dashboard-page h2{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+    margin-bottom:28px;
+
+}
+
+/* ---------- Main Grid ---------- */
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+}
+
+/* ---------- Charts + Bottom ---------- */
+
+.bottom-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+    margin-top:24px;
+
+}
+
+/* ---------- Dashboard Panel ---------- */
+
+.dashboard-panel{
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:22px;
+
+    border:1px solid #E8EDF6;
+
+    box-shadow:
+
+        0 8px 25px rgba(15,23,42,.05);
+
+    transition:.25s ease;
+
+}
+
+/* Hover */
+
+.dashboard-panel:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+        0 18px 45px rgba(15,23,42,.10);
+
+}
+
+/* ---------- Panel Header ---------- */
+
+.panel-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+.panel-header h3{
+
+    margin:0;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+}
+
+/* ---------- Buttons ---------- */
+
+.view-all-btn{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    color:#2563EB;
+
+    font-weight:600;
+
+    font-size:15px;
+
+    transition:.2s;
+
+}
+
+.view-all-btn:hover{
+
+    color:#1D4ED8;
+
+}
+
+/* ---------- Divider ---------- */
+
+.dashboard-divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:#EDF2F7;
+
+    margin:18px 0;
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:1200px){
+
+    .dashboard-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    .bottom-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .dashboard-page{
+
+        padding:18px;
+
+    }
+
+    .dashboard-page h2{
+
+        font-size:34px;
+
+    }
+
+    .dashboard-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+/* =====================================================
+   STAT CARDS
+=====================================================*/
+
+.stat-card{
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:26px;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:22px;
+
+    box-shadow:
+        0 8px 25px rgba(15,23,42,.05);
+
+    border:1px solid #E8EDF6;
+
+    transition:.25s ease;
+
+    cursor:pointer;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 18px 45px rgba(15,23,42,.10);
+
+}
+
+/* ---------- Icon ---------- */
+
+.stat-icon{
+
+    width:82px;
+
+    height:82px;
+
+    border-radius:22px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:34px;
+
+    flex-shrink:0;
+
+}
+
+/* ---------- Icon Colors ---------- */
+
+.icon-blue{
+
+    background:#2563EB;
+
+}
+
+.icon-green{
+
+    background:#22C55E;
+
+}
+
+.icon-orange{
+
+    background:#F59E0B;
+
+}
+
+.icon-red{
+
+    background:#EF4444;
+
+}
+
+/* ---------- Content ---------- */
+
+.stat-content{
+
+    flex:1;
+
+}
+
+.stat-title{
+
+    font-size:16px;
+
+    font-weight:500;
+
+    color:#64748B;
+
+    margin-bottom:8px;
+
+}
+
+.stat-value{
+
+    font-size:46px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+    line-height:1;
+
+}
+
+/* ---------- Footer ---------- */
+
+.stat-footer{
+
+    margin-top:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:15px;
+
+    color:#16A34A;
+
+    font-weight:600;
+
+}
+
+.stat-footer svg{
+
+    font-size:14px;
+
+}
+
+/* ---------- Percentage ---------- */
+
+.stat-positive{
+
+    color:#16A34A;
+
+}
+
+.stat-negative{
+
+    color:#DC2626;
+
+}
+
+.stat-neutral{
+
+    color:#64748B;
+
+}
+
+/* ---------- Mini Badge ---------- */
+
+.stat-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    margin-top:16px;
+
+}
+
+.badge-green{
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+}
+
+.badge-orange{
+
+    background:#FEF3C7;
+
+    color:#B45309;
+
+}
+
+.badge-red{
+
+    background:#FEE2E2;
+
+    color:#B91C1C;
+
+}
+
+/* ---------- Hover Effects ---------- */
+
+.stat-card:hover .stat-icon{
+
+    transform:scale(1.08);
+
+}
+
+.stat-card:hover .stat-value{
+
+    color:#2563EB;
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:768px){
+
+    .stat-card{
+
+        padding:20px;
+
+        gap:18px;
+
+    }
+
+    .stat-icon{
+
+        width:68px;
+
+        height:68px;
+
+        font-size:28px;
+
+    }
+
+    .stat-value{
+
+        font-size:36px;
+
+    }
+
+}
+/* =====================================================
+   CHART CARDS
+=====================================================*/
+
+.chart-card{
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:24px;
+
+    border:1px solid #E8EDF6;
+
+    box-shadow:
+        0 8px 25px rgba(15,23,42,.05);
+
+    transition:.25s ease;
+
+}
+
+.chart-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 18px 45px rgba(15,23,42,.10);
+
+}
+
+.chart-title{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+    margin-bottom:18px;
+
+}
+
+.chart-divider{
+
+    height:1px;
+
+    background:#EDF2F7;
+
+    margin-bottom:24px;
+
+}
+
+/* =====================================================
+   PIE CHART SECTION
+=====================================================*/
+
+.pie-layout{
+
+    display:grid;
+
+    grid-template-columns:280px 1fr;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+.legend-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.legend-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 16px;
+
+    border-radius:14px;
+
+    background:#FFFFFF;
+
+    border:1px solid #EDF2F7;
+
+    transition:.2s;
+
+}
+
+.legend-item:hover{
+
+    background:#F8FAFC;
+
+}
+
+.legend-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.legend-color{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+}
+
+.legend-name{
+
+    font-size:15px;
+
+    color:#334155;
+
+    font-weight:500;
+
+}
+
+.legend-value{
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+}
+
+/* =====================================================
+   BAR CHART
+=====================================================*/
+
+.chart-wrapper{
+
+    width:100%;
+
+    height:340px;
+
+}
+
+.recharts-cartesian-grid line{
+
+    stroke:#E5E7EB;
+
+}
+
+.recharts-cartesian-axis-tick-value{
+
+    fill:#64748B;
+
+    font-size:13px;
+
+}
+
+.recharts-tooltip-wrapper{
+
+    outline:none;
+
+}
+
+.recharts-default-tooltip{
+
+    border:none !important;
+
+    border-radius:14px !important;
+
+    background:#FFFFFF !important;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.12);
+
+    padding:12px !important;
+
+}
+
+/* =====================================================
+   PIE LABELS
+=====================================================*/
+
+.recharts-pie-label-text{
+
+    font-weight:700;
+
+    font-size:15px;
+
+}
+
+.recharts-legend-wrapper{
+
+    padding-top:10px;
+
+}
+
+/* =====================================================
+   CHART ANIMATION
+=====================================================*/
+
+.chart-card:hover .recharts-sector{
+
+    opacity:.95;
+
+}
+
+.chart-card:hover .recharts-bar-rectangle{
+
+    opacity:.95;
+
+}
+
+/* =====================================================
+   RESPONSIVE
+=====================================================*/
+
+@media(max-width:1100px){
+
+    .pie-layout{
+
+        grid-template-columns:1fr;
+
+        justify-items:center;
+
+        text-align:center;
+
+    }
+
+    .legend-list{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .chart-wrapper{
+
+        height:280px;
+
+    }
+
+}
+/* =====================================================
+   RECENT INTERNS
+=====================================================*/
+
+.recent-panel{
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:24px;
+
+    border:1px solid #E8EDF6;
+
+    box-shadow:
+        0 8px 25px rgba(15,23,42,.05);
+
+    transition:.25s ease;
+
+}
+
+.recent-panel:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 18px 45px rgba(15,23,42,.10);
+
+}
+
+/* ---------- Header ---------- */
+
+.recent-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.recent-header h3{
+
+    margin:0;
+
+    font-size:28px;
+
+    color:#1E293B;
+
+    font-weight:700;
+
+}
+
+.recent-header button{
+
+    border:none;
+
+    background:none;
+
+    color:#2563EB;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.recent-header button:hover{
+
+    color:#1D4ED8;
+
+}
+
+/* ---------- List ---------- */
+
+.recent-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ---------- Item ---------- */
+
+.recent-item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:18px 0;
+
+    border-bottom:1px solid #EDF2F7;
+
+    transition:.25s;
+
+}
+
+.recent-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.recent-item:hover{
+
+    padding-left:10px;
+
+}
+
+/* ---------- Left ---------- */
+
+.recent-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+/* ---------- Avatar ---------- */
+
+.recent-avatar{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#2563EB,#3B82F6);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#FFFFFF;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    flex-shrink:0;
+
+}
+
+/* ---------- Name ---------- */
+
+.recent-info h4{
+
+    margin:0;
+
+    font-size:18px;
+
+    color:#1E293B;
+
+    font-weight:700;
+
+}
+
+.recent-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+/* ---------- Department ---------- */
+
+.department-pill{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:max-content;
+
+    padding:5px 14px;
+
+    border-radius:50px;
+
+    background:#DBEAFE;
+
+    color:#2563EB;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* ---------- Time ---------- */
+
+.recent-time{
+
+    color:#64748B;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+/* ---------- Hover ---------- */
+
+.recent-item:hover .recent-avatar{
+
+    transform:scale(1.08);
+
+}
+
+.recent-item:hover h4{
+
+    color:#2563EB;
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:768px){
+
+    .recent-item{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:14px;
+
+    }
+
+    .recent-time{
+
+        margin-left:68px;
+
+    }
+
+}
+/* =====================================================
+   LOW ATTENDANCE ALERTS
+=====================================================*/
+
+.alerts-panel{
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:24px;
+
+    border:1px solid #E8EDF6;
+
+    box-shadow:
+        0 8px 25px rgba(15,23,42,.05);
+
+    transition:.25s ease;
+
+}
+
+.alerts-panel:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 18px 45px rgba(15,23,42,.10);
+
+}
+
+/* ---------- Header ---------- */
+
+.alert-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.alert-header h3{
+
+    margin:0;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+}
+
+.alert-header button{
+
+    border:none;
+
+    background:none;
+
+    color:#2563EB;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.alert-header button:hover{
+
+    color:#1D4ED8;
+
+}
+
+/* ---------- List ---------- */
+
+.alert-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+/* ---------- Card ---------- */
+
+.alert-card{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    background:#FFF8F8;
+
+    border-left:5px solid #EF4444;
+
+    transition:.25s;
+
+}
+
+.alert-card:hover{
+
+    transform:translateX(6px);
+
+    box-shadow:
+        0 10px 22px rgba(239,68,68,.12);
+
+}
+
+/* ---------- Left ---------- */
+
+.alert-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+/* ---------- Avatar ---------- */
+
+.alert-avatar{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:#FEE2E2;
+
+    color:#EF4444;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    flex-shrink:0;
+
+}
+
+/* ---------- Info ---------- */
+
+.alert-info h4{
+
+    margin:0;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+}
+
+.alert-info p{
+
+    margin-top:5px;
+
+    margin-bottom:0;
+
+    color:#64748B;
+
+    font-size:14px;
+
+}
+
+/* ---------- Right ---------- */
+
+.alert-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+/* ---------- Percentage ---------- */
+
+.attendance-value{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+}
+
+/* ---------- Status Badges ---------- */
+
+.status-badge{
+
+    padding:7px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+/* Critical */
+
+.badge-critical{
+
+    background:#FEE2E2;
+
+    color:#DC2626;
+
+}
+
+/* Warning */
+
+.badge-warning{
+
+    background:#FEF3C7;
+
+    color:#D97706;
+
+}
+
+/* Safe */
+
+.badge-safe{
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+}
+
+/* ---------- Footer ---------- */
+
+.alert-footer{
+
+    margin-top:22px;
+
+    text-align:center;
+
+}
+
+.alert-footer button{
+
+    background:none;
+
+    border:none;
+
+    color:#2563EB;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+.alert-footer button:hover{
+
+    color:#1D4ED8;
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:768px){
+
+    .alert-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+    .alert-right{
+
+        width:100%;
+
+        justify-content:space-between;
+
+    }
+
+}
+/* =====================================================
+   FINAL POLISH & UTILITIES
+=====================================================*/
+
+/* ---------- Global Smooth Animation ---------- */
+
+*{
+
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease,
+        transform .25s ease;
+
+}
+
+/* ---------- Custom Scrollbar ---------- */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#F1F5F9;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#CBD5E1;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#94A3B8;
+
+}
+
+/* ---------- Card Hover ---------- */
+
+.dashboard-panel:hover,
+.chart-card:hover,
+.stat-card:hover,
+.recent-panel:hover,
+.alerts-panel:hover{
+
+    border-color:#D6E4FF;
+
+}
+
+/* ---------- Focus ---------- */
+
+button:focus,
+input:focus,
+select:focus{
+
+    outline:none;
+
+}
+
+/* ---------- Buttons ---------- */
+
+button{
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+/* ---------- Links ---------- */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ---------- Utility ---------- */
+
+.text-success{
+
+    color:#22C55E;
+
+}
+
+.text-warning{
+
+    color:#F59E0B;
+
+}
+
+.text-danger{
+
+    color:#EF4444;
+
+}
+
+.text-primary{
+
+    color:#2563EB;
+
+}
+
+.bg-success{
+
+    background:#DCFCE7;
+
+}
+
+.bg-warning{
+
+    background:#FEF3C7;
+
+}
+
+.bg-danger{
+
+    background:#FEE2E2;
+
+}
+
+.bg-primary{
+
+    background:#DBEAFE;
+
+}
+
+/* ---------- Rounded Utilities ---------- */
+
+.rounded-sm{
+
+    border-radius:8px;
+
+}
+
+.rounded{
+
+    border-radius:14px;
+
+}
+
+.rounded-lg{
+
+    border-radius:22px;
+
+}
+
+/* ---------- Shadows ---------- */
+
+.shadow-sm{
+
+    box-shadow:
+
+        0 4px 10px rgba(15,23,42,.04);
+
+}
+
+.shadow{
+
+    box-shadow:
+
+        0 8px 25px rgba(15,23,42,.08);
+
+}
+
+.shadow-lg{
+
+    box-shadow:
+
+        0 18px 45px rgba(15,23,42,.12);
+
+}
+
+/* ---------- Fade Animation ---------- */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.dashboard-grid>*,
+.bottom-grid>*{
+
+    animation:fadeIn .45s ease;
+
+}
+
+/* ---------- Small Screens ---------- */
+
+@media(max-width:500px){
+
+    .dashboard-page{
+
+        padding:14px;
+
+    }
+
+    .panel-header h3{
+
+        font-size:22px;
+
+    }
+
+    .stat-value{
+
+        font-size:32px;
+
+    }
+
+    .chart-title{
+
+        font-size:17px;
+
+    }
+
+    .recent-info h4{
+
+        font-size:16px;
+
+    }
+
+    .attendance-value{
+
+        font-size:24px;
+
+    }
+
+}
+/* =====================================================
+   CHART CARD
+=====================================================*/
+
+.chart-card{
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:24px;
+
+    border:1px solid #E8EDF6;
+
+    box-shadow:
+        0 8px 24px rgba(15,23,42,.05);
+
+    transition:.25s ease;
+
+}
+
+.chart-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 18px 42px rgba(15,23,42,.10);
+
+}
+
+.chart-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.chart-header h3{
+
+    margin:0;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+}
+
+.chart-btn{
+
+    background:#EFF6FF;
+
+    color:#2563EB;
+
+    border:none;
+
+    padding:8px 14px;
+
+    border-radius:10px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.chart-btn:hover{
+
+    background:#2563EB;
+
+    color:white;
+
+}
+
+.chart-divider{
+
+    height:1px;
+
+    background:#EDF2F7;
+
+    margin-bottom:20px;
+
+}
+
+.chart-body{
+
+    width:100%;
+
+    height:320px;
+
+}
+
+/* =====================================================
+   RECHARTS
+=====================================================*/
+
+.recharts-tooltip-wrapper{
+
+    outline:none;
+
+}
+
+.recharts-default-tooltip{
+
+    border:none !important;
+
+    border-radius:14px !important;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.12);
+
+}
+
+.recharts-cartesian-grid line{
+
+    stroke:#E5E7EB;
+
+}
+
+.recharts-cartesian-axis-tick-value{
+
+    fill:#64748B;
+
+}
+
+.recharts-legend-item-text{
+
+    color:#475569 !important;
+
+    font-size:14px;
+
+}
+/* ===== Skeleton loading ===== */
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface-alt);
+  border-radius: 16px;
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,.05), transparent);
+  animation: shimmer 1.4s infinite;
+}
+
+body.dark .skeleton::after {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent);
+}
+
+@keyframes shimmer {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+.skeleton-title { height: 34px; width: 220px; margin-bottom: 8px; border-radius: 8px; }
+.skeleton-card { height: 110px; }
+.skeleton-chart { height: 360px; }
+.skeleton-panel { height: 220px; }
+
+/* ===== Stat card entrance stagger ===== */
+
+.dashboard-grid .stat-card {
+  animation: fadeSlideIn .4s ease both;
+}
+
+.dashboard-grid .stat-card:nth-child(1) { animation-delay: .05s; }
+.dashboard-grid .stat-card:nth-child(2) { animation-delay: .12s; }
+.dashboard-grid .stat-card:nth-child(3) { animation-delay: .19s; }
+.dashboard-grid .stat-card:nth-child(4) { animation-delay: .26s; }
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Refresh row ===== */
+
+.dashboard-refresh-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.last-updated {
+  font-size: 12px;
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+}
+
+.refresh-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.refresh-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.refresh-btn svg.spinning {
+  animation: spin .8s linear infinite;
+}
+
+/* ===== Chart range toggle ===== */
+
+.range-toggle {
+  display: flex;
+  background: var(--surface-alt);
+  border-radius: 10px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.range-toggle button {
+  border: none;
+  background: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+
+.range-toggle button.active {
+  background: var(--accent);
+  color: white;
+}
+
+/* ===== Clickable legend / pie ===== */
+
+.legend-item.clickable {
+  cursor: pointer;
+  transition: .15s ease;
+}
+
+.legend-item.clickable:hover {
+  background: var(--accent-soft) !important;
+  transform: translateX(2px);
+}
+
+.recharts-pie-sector {
+  cursor: pointer;
+}
+
+.empty-chart-msg {
+  color: var(--ink-muted);
+  text-align: center;
+  padding: 40px 0;
+}
+.dashboard-ambient { position: relative; overflow: hidden; }
+.dashboard-content { position: relative; z-index: 1; }
+
+.dashboard-blob {
+  position: absolute;
+  width: 420px; height: 420px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: .12;
+  z-index: 0;
+  pointer-events: none;
+  transition: transform .05s linear;
+}
+.dashboard-blob-1 { background: var(--accent); top: -120px; right: -100px; }
+.dashboard-blob-2 { background: var(--amber); bottom: -100px; left: -80px; }
+/* =====================================================
+   END OF DASHBOARD CSS
+=====================================================*/

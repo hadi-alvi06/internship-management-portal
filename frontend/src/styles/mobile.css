@@ -1,0 +1,211 @@
+/* ===================================================
+   LAYOUT SHELL — base rules here exactly replace the
+   old inline styles from MainLayout.jsx (260px margin,
+   35px padding), so desktop appearance is 100% unchanged.
+   Everything under the @media queries below only ever
+   applies on narrow screens.
+=================================================== */
+
+.main-content-area {
+  margin-left: 260px;
+  transition: margin-left .2s ease;
+}
+
+.page-content-wrap {
+  padding: 35px;
+}
+
+.sidebar-backdrop {
+  display: none;
+}
+
+.navbar-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: var(--ink);
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.sidebar-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.sidebar-top-row .logo {
+  margin-bottom: 0;
+}
+
+.sidebar-close-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--sidebar-text);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ===================================================
+   BREAKPOINT: tablets and phones
+=================================================== */
+
+@media (max-width: 900px) {
+  .main-content-area {
+    margin-left: 0;
+  }
+ .tilt-wrap { transform: none !important; }
+  .tilt-glare { display: none; }
+  .dashboard-blob { width: 220px; height: 220px; filter: blur(60px); }
+  .page-content-wrap {
+    padding: 16px;
+  }
+
+  .navbar-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-logo {
+    height: 26px;
+  }
+
+  .navbar-left h1 {
+    font-size: 18px;
+  }
+
+  .navbar {
+    padding: 0 14px;
+  }
+
+  .user-info {
+    display: none;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 260px;
+    transform: translateX(-100%);
+    transition: transform .25s ease;
+    z-index: 1500;
+  }
+    .chart-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .pie-chart,
+  .chart-body {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .recharts-responsive-container {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+  .sidebar.mobile-open {
+    transform: translateX(0);
+    box-shadow: 8px 0 30px rgba(0,0,0,.35);
+  }
+
+  .sidebar-close-btn {
+    display: block;
+  }
+
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.55);
+    z-index: 1400;
+    backdrop-filter: blur(2px);
+  }
+
+  .dashboard-grid,
+  .bottom-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .pie-layout {
+    flex-direction: column;
+  }
+  .chart-card {
+    width: 100%;
+    min-width: 0;
+  }
+  .pie-chart,
+  .chart-body {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  .recharts-responsive-container {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  .form-progress-steps {
+    justify-content: space-around;
+  }
+  .step-label {
+    display: none;
+  }
+
+  .card-skeleton-grid {
+    grid-template-columns: 1fr;
+  }
+  .filters {
+    flex-direction: column;
+  }
+
+  .filters select {
+    width: 100%;
+  }
+
+  .page-header h1,
+  .manage-page h1,
+  .attendance-page h1,
+  .accounts-page h1,
+  .profile-page h1,
+  .settings-header h1 {
+    font-size: 24px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-value {
+    font-size: 24px;
+  }
+
+  .login-card {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-page::before,
+  .login-page::after {
+    width: 260px;
+    height: 260px;
+    filter: blur(60px);
+  }
+
+  .dashboard-refresh-row {
+    flex-wrap: wrap;
+  }
+
+  .form-progress-bar {
+    margin-bottom: 12px;
+  }
+}
