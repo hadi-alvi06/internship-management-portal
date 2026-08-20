@@ -22,16 +22,16 @@ Database: MySQL
 Deployment & Networking: Local Network Deployment (LAN), Cross-browser responsive UI
 
 ## Key Technical Features
-# JWT Authentication & Automatic Role Detection: 
+### JWT Authentication & Automatic Role Detection: 
 Secure login mechanism utilizing JWT tokens and bcrypt password hashing. Automatically identifies user permissions upon login (Admin vs. Supervisor) and issues role-appropriate access privileges.
 
-# Role-Based Access Control (RBAC):
+### Role-Based Access Control (RBAC):
 Strict security boundaries enforced directly at the API level. Backend controllers validate JWT payloads to prevent unauthorized endpoint access, regardless of frontend UI routing.
 
-# Real-Time Dashboard Analytics:
+### Real-Time Dashboard Analytics:
 Live metrics tracking overall intern counts, active statuses, department distributions (via Recharts), and attendance trends without requiring manual database re-indexing. Smart attendance engine handling daily tracking, backfilling logic, and statistical aggregations exclusively on working days
 
-# Dynamic PDF & Excel Operations:
+### Dynamic PDF & Excel Operations:
 Features direct database-to-Excel migrations using pandas and openpyxl, alongside dynamic PDF report generation powered by ReportLab
 
 ## Design Notes
